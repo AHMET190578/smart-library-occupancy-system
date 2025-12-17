@@ -15,8 +15,7 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-      - name: Checkout repository
-        uses: actions/checkout@v4
+      - uses: actions/checkout@v4
 
       - name: Set up JDK 17
         uses: actions/setup-java@v4
@@ -24,6 +23,6 @@ jobs:
           distribution: temurin
           java-version: "17"
 
-      - name: Build backend with Maven
+      - name: Build backend
         working-directory: backend
         run: mvn clean package -DskipTests
