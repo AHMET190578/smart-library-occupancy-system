@@ -88,4 +88,6 @@ public class PlaceOccupancyController {
     public ResponseEntity<Map<Long, PlaceStatusDTO>> getAllPlaces() {
         return ResponseEntity.ok(realTimeOccupancyService.getAllStatuses());
     }
+
+
 }

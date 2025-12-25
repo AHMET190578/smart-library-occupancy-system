@@ -3,15 +3,15 @@ package com.backend.service;
 import com.backend.models.Camera;
 import com.backend.models.Place;
 import com.backend.repository.CameraRepository;
-import com.backend.repository.PlaceHistoryRepository;
 import com.backend.repository.PlaceRepository;
+import com.backend.request.CreateCameraRequest;
 import jakarta.persistence.EntityNotFoundException;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;
-import org.springframework.transaction.annotation.Transactional;
 
 import java.time.LocalDateTime;
 import java.util.List;
+import java.util.Optional;
 
 @Service
 @RequiredArgsConstructor
@@ -38,5 +38,22 @@ public class CameraService {
 
         camera.setLastUpdate(LocalDateTime.now());
         cameraRepository.save(camera);
+    }
+
+    public Camera create(CreateCameraRequest req){
+        Place place = placeRepository.findById(req.getPlaceId())
+                .orElseThrow(() ->
+                        new EntityNotFoundException("Place not found: " + req.getPlaceId())
+                );
+
+        Camera camera = new Camera();
+        camera.setCameraId(req.getCameraId());
+        camera.setPlace(place);
+        camera.setRtspUrl(req.getRtspUrl());
+        camera.setPosition(req.getPosition());
+
+        return cameraRepository.save(camera);
+
+
     }
 }

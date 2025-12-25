@@ -2,6 +2,7 @@ package com.backend.service;
 
 import com.backend.models.Place;
 import com.backend.repository.PlaceRepository;
+import com.backend.request.CreatePlaceRequest;
 import lombok.RequiredArgsConstructor;
 
 import org.springframework.stereotype.Service;
@@ -26,5 +27,15 @@ public class PlaceService {
         return placeRepository.findById(id)
                 .orElseThrow(() -> new RuntimeException("Place not found: " + id));
     }
+
+    public Place create(CreatePlaceRequest req) {
+        Place place = new Place();
+        place.setName(req.getName());
+        place.setType(req.getType());
+
+        return placeRepository.save(place);
+    }
+
+
 
 }

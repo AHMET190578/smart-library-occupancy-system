@@ -4,7 +4,7 @@ import com.backend.models.Camera;
 import com.backend.models.Place;
 import org.springframework.data.jpa.repository.JpaRepository;
 
-import java.lang.ScopedValue;
+
 import java.util.List;
 import java.util.Optional;
 
