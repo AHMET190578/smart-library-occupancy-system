@@ -1,0 +1,17 @@
+[33m7430513[m[33m ([m[1;36mHEAD[m[33m -> [m[1;32mmain[m[33m, [m[1;31morigin/main[m[33m, [m[1;32mbackend-java[m[33m)[m HEAD@{0}: checkout: moving from backend-java to main
+[33m7430513[m[33m ([m[1;36mHEAD[m[33m -> [m[1;32mmain[m[33m, [m[1;31morigin/main[m[33m, [m[1;32mbackend-java[m[33m)[m HEAD@{1}: checkout: moving from main to backend-java
+[33m7430513[m[33m ([m[1;36mHEAD[m[33m -> [m[1;32mmain[m[33m, [m[1;31morigin/main[m[33m, [m[1;32mbackend-java[m[33m)[m HEAD@{2}: reset: moving to HEAD~1
+[33mbdbb078[m HEAD@{3}: checkout: moving from main to main
+[33mbdbb078[m HEAD@{4}: cherry-pick: Backend test endpoints, Place & Camera endpoints, Python test script added
+[33m7430513[m[33m ([m[1;36mHEAD[m[33m -> [m[1;32mmain[m[33m, [m[1;31morigin/main[m[33m, [m[1;32mbackend-java[m[33m)[m HEAD@{5}: reset: moving to HEAD~1
+[33mcc7023d[m HEAD@{6}: commit: Backend test endpoints, Place & Camera endpoints, Python test script added
+[33m7430513[m[33m ([m[1;36mHEAD[m[33m -> [m[1;32mmain[m[33m, [m[1;31morigin/main[m[33m, [m[1;32mbackend-java[m[33m)[m HEAD@{7}: commit: trigger backend CI
+[33m3fb742c[m HEAD@{8}: checkout: moving from main to main
+[33m3fb742c[m HEAD@{9}: commit: Update workflow to use Java 21 for backend build
+[33mcfe6d4b[m HEAD@{10}: commit: Test backend CI trigger
+[33m5b1c413[m HEAD@{11}: commit: fixed all path
+[33m0a7eedf[m HEAD@{12}: commit: Fix backend CI paths for backend-java folder
+[33m7ca76c3[m HEAD@{13}: commit: Fix GitHub Actions workflow path
+[33m398009e[m HEAD@{14}: commit: Add backend CI for monorepo
+[33m3935795[m HEAD@{15}: commit: Add Java Spring Boot backend
+[33m0c2e124[m HEAD@{16}: commit (initial): Add team workflow section to README
