@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dolu Mu? - Ana Sayfa</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div class="dashboard-container">
+        <header class="header">
+            <p id="main-welcome">Merhaba</p>
+            <p><span id="main-status-label">Sistem Durumu:</span> <strong id="main-status-value">Aktif</strong></p>
+        </header>
+
+        <section class="card occupancy-card">
+            <h3 id="main-occupancy-title">GÜNCEL DOLULUK</h3>
+            <div class="progress-bar-container">
+                <div class="progress-fill" style="width: 80%;"></div>
+            </div>
+            <div class="percentage">%80</div>
+            <p class="last-update"><span id="main-last-update">Son Güncelleme:</span> 1 dk önce</p>
+        </section>
+
+        <section class="card chart-card">
+            <h4 id="main-forecast-24">TAHMİNLEME ( 24 SAAT )</h4>
+            <div class="chart-area">
+                <div class="chart-points">
+                    <span id="main-today">Bugün</span> <strong>%80</strong>
+                    <span id="main-12h">12s Sonra</span> <strong>%90</strong>
+                    <span id="main-tomorrow">Yarın</span> <strong>%95</strong>
+                </div>
+            </div>
+        </section>
+
+        <section class="card forecast-card">
+            <div class="forecast-title" id="main-weekly-title">☁️ HAFTALIK TAHMİN</div>
+            <table class="forecast-table">
+                <tr><td id="day-1">Pazartesi</td><td>☀️</td><td>22° / 14°</td></tr>
+                <tr><td id="day-2">Salı</td><td>☁️</td><td>19° / 12°</td></tr>
+                <tr><td id="day-3">Çarşamba</td><td>🌧️</td><td>15° / 10°</td></tr>
+                <tr><td id="day-4">Perşembe</td><td>☀️</td><td>20° / 18°</td></tr>
+                <tr><td id="day-5">Cuma</td><td>☁️</td><td>15° / 10°</td></tr>
+                <tr><td id="day-6">Cumartesi</td><td>☀️</td><td>15° / 10°</td></tr>
+                <tr><td id="day-7">Pazar</td><td>☁️</td><td>15° / 10°</td></tr>
+            </table>
+        </section>
+
+        <footer class="bottom-nav-container">
+            <a href="ayarlar.html" class="nav-blue-btn">
+                <span class="nav-icon-placeholder">⚙️</span> 
+            </a>
+        </footer>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

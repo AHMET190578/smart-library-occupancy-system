@@ -1,0 +1,14 @@
+# Model dosyaları (çok büyük, Google Drive ile paylaş)
+models/
+
+# Log dosyaları
+logs/
+
+# Python cache
+__pycache__/
+*.pyc
+*.pyo
+
+# Ortam dosyaları
+.env
+venv/

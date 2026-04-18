@@ -1,0 +1,183 @@
+/* --- 1. ADIM: RENK DEĞİŞKENLERİ --- */
+:root {
+    --bg-app: #FFFFFF;
+    --text-main: #1A1A1B;
+    --card-blue: #9ADFEE;    /* Ekran görüntüsündeki turkuaz mavi */
+    --card-grey: #F1F1F1;
+    --border-color: #E2E8F0;
+    --progress-bg: rgba(0,0,0,0.1);
+    --progress-fill: #000000;
+    --transition: 0.3s ease;
+}
+
+[data-theme="dark"] {
+    --bg-app: #121212;
+    --text-main: #FFFFFF;
+    --card-blue: #1E293B;    /* Karanlık modda daha koyu/soft bir mavi */
+    --card-grey: #2A2A2A;
+    --border-color: #334155;
+    --progress-bg: #334155;
+    --progress-fill: #9ADFEE;
+}
+
+/* --- 2. ADIM: GENEL AYARLAR --- */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Inter', sans-serif;
+}
+
+body {
+    background-color: var(--bg-app);
+    color: var(--text-main);
+    transition: background-color var(--transition), color var(--transition);
+    min-height: 100vh;
+    overflow-x: hidden;
+}
+
+/* --- 3. ADIM: SAYFA ÖZEL TASARIMLARI --- */
+
+/* 1. Sayfa (Splash) */
+.splash-screen {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--card-blue);
+    text-decoration: none;
+}
+.main-title { font-size: 48px; font-weight: 900; color: var(--text-main); }
+
+/* 2. Sayfa (Dashboard) */
+.dashboard-container { padding: 20px; display: flex; flex-direction: column; gap: 20px; }
+.occupancy-card { background-color: var(--card-blue); padding: 20px; border-radius: 20px; text-align: center; }
+.progress-bar-container { background: var(--progress-bg); height: 10px; border-radius: 5px; margin: 15px 0; }
+.progress-fill { background: var(--progress-fill); height: 100%; border-radius: 5px; }
+
+/* 3. Sayfa (Ayarlar) */
+.settings-header { display: flex; align-items: center; gap: 15px; margin: 20px; }
+.back-btn { text-decoration: none; font-size: 24px; color: var(--text-main); }
+
+.settings-item {
+    background-color: var(--card-grey);
+    padding: 18px;
+    border-radius: 15px;
+    margin: 10px 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    cursor: pointer;
+}
+
+/* --- 4. ADIM: MAVİ NAVİGASYON BUTONU --- */
+.bottom-nav-container {
+    position: fixed;
+    bottom: 30px;
+    left: 20px;
+    right: 20px;
+    display: flex;
+    justify-content: center;
+}
+
+.nav-blue-btn {
+    width: 100%;
+    height: 55px;
+    background-color: var(--card-blue);
+    border: none;
+    border-radius: 15px;
+    cursor: pointer;
+    font-size: 24px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+    transition: transform 0.2s;
+}
+
+.nav-blue-btn:active { transform: scale(0.95); }
+
+/* --- 5. ADIM: MODAL VE ETKİLEŞİMLER --- */
+
+.toggle-switch { width: 44px; height: 22px; background: #ccc; border-radius: 20px; position: relative; cursor: pointer; }
+[data-theme="dark"] .toggle-switch { background: #4CAF50; }
+.switch-ball { width: 16px; height: 16px; background: white; border-radius: 50%; position: absolute; top: 3px; left: 3px; transition: 0.3s; }
+[data-theme="dark"] .switch-ball { left: 25px; }
+
+.language-picker {
+    position: fixed;
+    bottom: -100%; left: 0; width: 100%;
+    background: var(--bg-app);
+    padding: 30px;
+    border-radius: 30px 30px 0 0;
+    transition: bottom 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+    box-shadow: 0 -10px 30px rgba(0,0,0,0.2);
+    z-index: 1001;
+}
+.language-picker.active { bottom: 0; }
+
+.modal-overlay {
+    position: fixed;
+    top: 0; left: 0; width: 100%; height: 100%;
+    background: rgba(0,0,0,0.5);
+    display: none;
+    z-index: 1000;
+}
+.modal-overlay.active { display: block; }
+
+.picker-item { display: flex; justify-content: space-between; padding: 15px 0; border-bottom: 1px solid var(--border-color); cursor: pointer; }
+.radio-circle { width: 20px; height: 20px; border: 2px solid #ddd; border-radius: 50%; }
+.radio-circle.selected { background-color: var(--text-main); border-color: var(--text-main); }
+
+/* --- 6. ADIM: KVKK MODAL ÖZEL EKLEMELERİ (YENİ) --- */
+
+.kvkk-picker {
+    height: 70vh !important; 
+    display: flex;
+    flex-direction: column;
+}
+
+.picker-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 15px;
+    padding-bottom: 10px;
+    border-bottom: 1px solid var(--border-color);
+}
+
+.picker-label { font-weight: bold; font-size: 18px; }
+
+.close-picker {
+    background: none;
+    border: none;
+    font-size: 26px;
+    color: var(--text-main);
+    cursor: pointer;
+}
+
+.scrollable-content {
+    overflow-y: auto !important;
+    flex: 1;
+    text-align: left;
+    padding-right: 5px;
+}
+
+.kvkk-text-body {
+    font-size: 14px;
+    line-height: 1.6;
+    color: var(--text-main);
+}
+
+.kvkk-text-body h3 {
+    margin: 15px 0 5px 0;
+    font-size: 16px;
+    color: var(--card-blue); 
+}
+
+/* Scrollbar Tasarımı */
+.scrollable-content::-webkit-scrollbar { width: 4px; }
+.scrollable-content::-webkit-scrollbar-thumb {
+    background: var(--card-blue);
+    border-radius: 10px;
+}

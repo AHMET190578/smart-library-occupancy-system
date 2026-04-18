@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dolu Mu? - Ayarlar</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div class="settings-container">
+        <header class="settings-header">
+            <a href="ana-sayfa.html" class="back-btn">←</a>
+            <h1 id="set-title">AYARLAR</h1>
+        </header>
+
+        <div class="settings-list">
+            <div class="settings-item" onclick="toggleLanguageMenu()">
+                <span id="set-lang-text">Sayfa Dili</span>
+                <span class="arrow">></span>
+            </div>
+            
+            <div class="settings-item" onclick="toggleKVKKMenu()">
+                <span id="set-kvkk-text">KVKK Aydınlatma Metni</span>
+                <span class="arrow">></span>
+            </div>
+
+            <div class="settings-item theme-toggle-container" onclick="toggleTheme()">
+                <span id="set-dark-text">Karanlık Mod</span>
+                <div class="toggle-switch">
+                    <div class="switch-ball"></div>
+                </div>
+            </div>
+        </div>
+
+        <div id="language-modal" class="language-picker">
+            <div class="picker-header">
+                <span class="picker-label" id="set-picker-header">Sayfa Dili Seçin</span>
+                <button class="close-picker" onclick="closeAllModals()">×</button>
+            </div>
+            <div class="picker-content">
+                <div class="picker-item" onclick="selectLanguage('tr')">
+                    <span>Türkçe</span>
+                    <div class="radio-circle" id="radio-tr"></div>
+                </div>
+                <div class="picker-item" onclick="selectLanguage('en')">
+                    <span>İngilizce</span>
+                    <div class="radio-circle" id="radio-en"></div>
+                </div>
+            </div>
+        </div>
+
+        <div id="kvkk-modal" class="language-picker kvkk-picker">
+            <div class="picker-header">
+                <span class="picker-label">KVKK Aydınlatma Metni</span>
+                <button class="close-picker" onclick="closeAllModals()">×</button>
+            </div>
+            <div class="picker-content scrollable-content">
+                <div class="kvkk-text-body">
+                    <p>6698 sayılı KVKK uyarınca, <strong>[Dolu Mu?]</strong> hizmeti kapsamında kamera görüntüleri aracılığıyla elde edilen verileriniz hakkında bilgilendirme:</p>
+                    <br>
+                    <p><strong>1. İşleme Amacı:</strong> Mekan doluluk oranlarının tespiti.</p>
+                    <p><strong>2. Veri Güvenliği:</strong> Görüntüler anlık anonimleştirilir, kaydedilmez.</p>
+                    <p><strong>3. İletişim:</strong> destek@dolumu.com</p>
+                </div>
+            </div>
+        </div>
+
+        <div id="modal-overlay" class="modal-overlay" onclick="closeAllModals()"></div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dolu Mu? - KVKK</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        body { 
+            padding: 20px; 
+            font-family: sans-serif; 
+            background-color: var(--bg-color, #ffffff);
+            color: var(--text-color, #000000);
+            margin: 0;
+        }
+        .kvkk-container { max-width: 600px; margin: 0 auto; }
+        
+        /* BURASI KRİTİK: height: auto olmalı ki metin uzadıkça kutu da uzasın */
+        .kvkk-content { 
+            background: #f9f9f9; 
+            padding: 20px; 
+            border-radius: 15px;
+            line-height: 1.6;
+            font-size: 14px;
+            height: auto; /* Sabit yükseklik varsa iptal eder */
+            min-height: 400px; /* En az bu kadar olsun */
+            box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+            margin-bottom: 50px; /* Sayfa altında boşluk kalsın */
+        }
+
+        /* Karanlık Mod Ayarı */
+        [data-theme='dark'] .kvkk-content { background: #1e1e1e; color: #eee; }
+
+        h2 { font-size: 18px; color: #fb8c00; margin-top: 20px; }
+        .back-btn { text-decoration: none; font-size: 28px; color: inherit; margin-right: 15px; }
+        header { display: flex; align-items: center; margin-bottom: 20px; }
+    </style>
+</head>
+<body>
+
+    <div class="kvkk-container">
+        <header>
+            <a href="ayarlar.html" class="back-btn">←</a>
+            <h1 id="set-kvkk-text" style="font-size: 22px; margin: 0;">KVKK Aydınlatma Metni</h1>
+        </header>
+
+        <div class="kvkk-content">
+            <p>6698 sayılı Kişisel Verilerin Korunması Kanunu (“KVKK”) uyarınca, veri sorumlusu sıfatıyla, sunduğumuz <strong>[Dolu Mu?]</strong> hizmeti kapsamında kamera görüntüleri aracılığıyla elde edilen kişisel verilerinize ilişkin sizi bilgilendirmek istiyoruz.</p>
+
+            <h2>1. İşlenen Kişisel Verileriniz</h2>
+            <p>Uygulamamızın işleyişi gereği, otopark/mekan giriş ve çıkışlarında bulunan kameralar aracılığıyla aşağıdaki verileriniz işlenebilir:</p>
+            <ul>
+                <li><strong>Görsel Veriler:</strong> Kamera kayıtlarında yer alan fiziksel görünüm ve araç görüntüsü.</li>
+                <li><strong>Plaka Bilgisi:</strong> Sistemimiz araç plakası okuyorsa işlenmektedir.</li>
+            </ul>
+
+            <h2>2. Kişisel Verilerin İşlenme Amacı</h2>
+            <p>Kişisel verileriniz, aşağıdaki amaçlarla sınırlı olarak işlenmektedir:</p>
+            <ul>
+                <li>Mekan/Otopark doluluk oranlarının anlık olarak tespit edilmesi ve kullanıcılara sunulması.</li>
+                <li>Hizmet kalitesinin artırılması ve sistem optimizasyonu.</li>
+                <li>Tesis ve işletme güvenliğinin sağlanması.</li>
+                <li>Hukuki uyuşmazlıklarda delil olarak kullanılması.</li>
+            </ul>
+
+            <h2>3. Veri İşlemenin Hukuki Sebebi</h2>
+            <p>Söz konusu kişisel veriler, KVKK’nın 5. maddesinde belirtilen; "Veri sorumlusunun meşru menfaati" ve "Bir hakkın tesisi" hukuki sebeplerine dayalı olarak işlenmektedir.</p>
+
+            <h2>4. Verilerin Aktarılması ve Saklanması</h2>
+            <p>Toplanan görüntüler, doluluk tespiti yapıldıktan sonra mümkün olan en kısa sürede anonimleştirilmekte veya imha edilmektedir.</p>
+
+            <h2>5. Haklarınız</h2>
+            <p>Taleplerinizi <strong>destek@dolumu.com</strong> üzerinden bize iletebilirsiniz.</p>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
